@@ -1,1 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>JSS 1 Mathematics - Place Value | EBAS Learning Academy</title>
+
+  <meta name="description" content="EBAS Learning Academy JSS 1 Mathematics Unit 1 Subtopic 2: Place Value. Prepared by Shaykh Zikr.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f8f4;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #075e2b, #0b7a3b);
+      color: white;
+      padding: 28px 16px;
+      text-align: center;
+      border-bottom: 5px solid #d4af37;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 15px;
+      margin: 4px 0;
+    }
+
+    .motto {
+      color: #ffd95a;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    .container {
+      width: 94%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px 0 40px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      background: #075e2b;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .back-btn:hover {
+      background: #064b23;
+    }
+
+    .lesson-title {
+      background: white;
+      border-left: 6px solid #d4af37;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .lesson-title h2 {
+      color: #075e2b;
+      margin-bottom: 8px;
+    }
+
+    .lesson-title h3 {
+      color: #555;
+      font-size: 18px;
+    }
+
+    section {
+      background: white;
+      margin: 18px 0;
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+
+    section h2 {
+      color: #075e2b;
+      font-size: 21px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d4af37;
+      padding-bottom: 7px;
+    }
+
+    section h3 {
+      color: #0b7a3b;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    .definition {
+      background: #eef8ef;
+      border-left: 5px solid #075e2b;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 7px;
+      font-weight: bold;
+    }
+
+    .gold-box {
+      background: #fff8dc;
+      border-left: 5px solid #d4af37;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 7px;
+    }
+
+    .example {
+      background: #f8f8f8;
+      border: 1px solid #ddd;
+      padding: 17px;
+      margin: 15px 0;
+      border-radius: 9px;
+    }
+
+    .example-title {
+      color: #075e2b;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .number-display {
+      font-size: 27px;
+      font-weight: bold;
+      color: #075e2b;
+      text-align: center;
+      margin: 12px 0;
+      letter-spacing: 2px;
+    }
+
+    .math {
+      font-family: "Courier New", monospace;
+      background: #f1f1f1;
+      padding: 3px 7px;
+      border-radius: 4px;
+    }
+
+    .place-chart {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 14px;
+    }
+
+    .place-chart th,
+    .place-chart td {
+      border: 1px solid #bbb;
+      padding: 10px 6px;
+      text-align: center;
+    }
+
+    .place-chart th {
+      background: #075e2b;
+      color: white;
+    }
+
+    .place-chart tr:nth-child(even) {
+      background: #f2f8f3;
+    }
+
+    .highlight {
+      color: #075e2b;
+      font-weight: bold;
+    }
+
+    .question {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin: 12px 0;
+      border-radius: 8px;
+    }
+
+    .options {
+      margin-top: 8px;
+      padding-left: 18px;
+    }
+
+    .challenge {
+      background: linear-gradient(135deg, #fff8dc, #fffdf2);
+      border: 2px solid #d4af37;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .answer-box {
+      background: #eef8ef;
+      border: 1px solid #9bc5a6;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    .message {
+      background: #075e2b;
+      color: white;
+      padding: 25px;
+      text-align: center;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    .message h2 {
+      color: #ffd95a;
+      border: none;
+    }
+
+    .quote {
+      font-size: 20px;
+      font-style: italic;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    ul,
+    ol {
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 7px;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .mini-card {
+      background: #f5faf6;
+      border: 1px solid #cbdccc;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .mini-card h4 {
+      color: #075e2b;
+      margin-bottom: 7px;
+    }
+
+    footer {
+      background: #053d1d;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 35px;
+    }
+
+    footer strong {
+      color: #ffd95a;
+    }
+
+    .contact {
+      margin-top: 10px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 17px;
+      }
+
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .place-chart {
+        font-size: 11px;
+      }
+
+      .place-chart th,
+      .place-chart td {
+        padding: 7px 3px;
+      }
+
+      .number-display {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>📘 EBAS LEARNING ACADEMY</h1>
+  <p>JSS 1 MATHEMATICS</p>
+  <p>UNIT 1: NUMBER AND NUMERATION</p>
+  <p class="motto">PASS ALL WITH EXCELLENCE</p>
+</header>
+
+<div class="container">
+
+  <a class="back-btn" href="jss1-mathematics.html">
+    ← Back to JSS 1 Mathematics
+  </a>
+
+  <div class="lesson-title">
+    <h2>SUBTOPIC 2: PLACE VALUE</h2>
+    <h3>Prepared by: Shaykh Zikr</h3>
+    <p><strong>Excellent Brotherhood Academy Syndicate (EBAS)</strong></p>
+  </div>
+
+
+  <!-- 1 -->
+  <section>
+    <h2>🎯 1. LEARNING OBJECTIVES</h2>
+
+    <p>By the end of this lesson, you should be able to:</p>
+
+    <ol>
+      <li>Explain the meaning of place value.</li>
+      <li>Identify the position of a digit in a whole number.</li>
+      <li>Name the different places in a number.</li>
+      <li>State the value of a digit according to its position.</li>
+      <li>Distinguish between the face value and place value of a digit.</li>
+      <li>Use a place-value chart correctly.</li>
+      <li>Read numbers using their place values.</li>
+      <li>Apply place value to large numbers.</li>
+    </ol>
+  </section>
+
+
+  <!-- 2 -->
+  <section>
+    <h2>🧠 2. LET'S BEGIN FROM SCRATCH</h2>
+
+    <p>Look at these two numbers:</p>
+
+    <div class="number-display">5 &nbsp;&nbsp; and &nbsp;&nbsp; 50</div>
+
+    <p>They both contain the digit <strong>5</strong>.</p>
+
+    <p>But are they worth the same?</p>
+
+    <div class="definition">
+      No.
+    </div>
+
+    <p>In <strong>5</strong>, the 5 means:</p>
+
+    <div class="gold-box">
+      5 ones
+    </div>
+
+    <p>In <strong>50</strong>, the 5 means:</p>
+
+    <div class="gold-box">
+      5 tens = 50
+    </div>
+
+    <p>Now look at:</p>
+
+    <div class="number-display">500</div>
+
+    <p>The 5 means:</p>
+
+    <div class="gold-box">
+      5 hundreds = 500
+    </div>
+
+    <p>So we can see something very important:</p>
+
+    <div class="definition">
+      The position of a digit determines its value.
+      <br><br>
+      This is called <strong>PLACE VALUE.</strong>
+    </div>
+  </section>
+
+
+  <!-- 3 -->
+  <section>
+    <h2>📖 3. WHAT IS PLACE VALUE?</h2>
+
+    <h3>Definition</h3>
+
+    <div class="definition">
+      Place value is the value of a digit because of the position it occupies in a number.
+    </div>
+
+    <p>Let's make it simpler:</p>
+
+    <div class="gold-box">
+      <strong>Place</strong> tells us where the digit is.
+      <br>
+      <strong>Value</strong> tells us what the digit is worth there.
+    </div>
+
+    <div class="example">
+      <p><strong>5</strong></p>
+      <p>The 5 is in the ones place.</p>
+      <p>Its place value is:</p>
+      <p><strong>5</strong></p>
+    </div>
+
+    <div class="example">
+      <p><strong>50</strong></p>
+      <p>The 5 is in the tens place.</p>
+      <p>Its place value is:</p>
+      <p><strong>50</strong></p>
+    </div>
+
+    <div class="example">
+      <p><strong>500</strong></p>
+      <p>The 5 is in the hundreds place.</p>
+      <p>Its place value is:</p>
+      <p><strong>500</strong></p>
+    </div>
+
+    <div class="gold-box">
+      <strong>Same digit → Different position → Different value.</strong>
+    </div>
+  </section>
+
+
+  <!-- 4 -->
+  <section>
+    <h2>🔢 4. THE BASIC PLACE VALUES</h2>
+
+    <p>Let's begin with the smallest places.</p>
+
+    <table class="place-chart">
+      <tr>
+        <th>Place</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>Ones</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Tens</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>Hundreds</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>Thousands</td>
+        <td>1,000</td>
+      </tr>
+      <tr>
+        <td>Ten Thousands</td>
+        <td>10,000</td>
+      </tr>
+      <tr>
+        <td>Hundred Thousands</td>
+        <td>100,000</td>
+      </tr>
+      <tr>
+        <td>Millions</td>
+        <td>1,000,000</td>
+      </tr>
+    </table>
+
+    <div class="gold-box">
+      <strong>Notice the pattern:</strong>
+      <br><br>
+      1 → 10 → 100 → 1,000 → 10,000 → 100,000 → 1,000,000
+      <br><br>
+      Every time we move one place to the left, the value becomes
+      <strong>10 times greater.</strong>
+    </div>
+  </section>
+
+
+  <!-- 5 -->
+  <section>
+    <h2>⭐ 5. THE ONES PLACE</h2>
+
+    <p>The first place on the right is called the:</p>
+
+    <div class="definition">
+      ONES PLACE
+    </div>
+
+    <div class="example">
+      <div class="number-display">7</div>
+
+      <p>7 is in the ones place.</p>
+
+      <p><strong>Place:</strong> Ones</p>
+      <p><strong>Value:</strong> 7</p>
+    </div>
+  </section>
+
+
+  <!-- 6 -->
+  <section>
+    <h2>⭐ 6. THE TENS PLACE</h2>
+
+    <p>The second place from the right is:</p>
+
+    <div class="definition">
+      TENS
+    </div>
+
+    <div class="example">
+      <div class="number-display">47</div>
+
+      <p>Let's separate the digits:</p>
+
+      <div class="number-display">4 &nbsp; | &nbsp; 7</div>
+
+      <p>4 is in the tens place.</p>
+      <p>7 is in the ones place.</p>
+
+      <br>
+
+      <p>Therefore:</p>
+
+      <div class="gold-box">
+        4 tens = 40
+        <br>
+        7 ones = 7
+      </div>
+
+      <p>So:</p>
+
+      <div class="number-display">47 = 40 + 7</div>
+    </div>
+  </section>
+
+
+  <!-- 7 -->
+  <section>
+    <h2>⭐ 7. THE HUNDREDS PLACE</h2>
+
+    <p>The third place from the right is:</p>
+
+    <div class="definition">
+      HUNDREDS
+    </div>
+
+    <div class="example">
+
+      <div class="number-display">325</div>
+
+      <table class="place-chart">
+        <tr>
+          <th>Hundreds</th>
+          <th>Tens</th>
+          <th>Ones</th>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>2</td>
+          <td>5</td>
+        </tr>
+      </table>
+
+      <p>Therefore:</p>
+
+      <div class="gold-box">
+        3 hundreds = 300
+        <br>
+        2 tens = 20
+        <br>
+        5 ones = 5
+      </div>
+
+      <div class="number-display">
+        325 = 300 + 20 + 5
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 8 -->
+  <section>
+    <h2>⭐ 8. THE THOUSANDS PLACE</h2>
+
+    <p>The fourth place from the right is:</p>
+
+    <div class="definition">
+      THOUSANDS
+    </div>
+
+    <div class="example">
+
+      <div class="number-display">4,582</div>
+
+      <table class="place-chart">
+        <tr>
+          <th>Thousands</th>
+          <th>Hundreds</th>
+          <th>Tens</th>
+          <th>Ones</th>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+          <td>8</td>
+          <td>2</td>
+        </tr>
+      </table>
+
+      <div class="gold-box">
+        4 thousands = 4,000
+        <br>
+        5 hundreds = 500
+        <br>
+        8 tens = 80
+        <br>
+        2 ones = 2
+      </div>
+
+      <div class="number-display">
+        4,582 = 4,000 + 500 + 80 + 2
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 9 -->
+  <section>
+    <h2>🧠 9. PLACE-VALUE CHART</h2>
+
+    <p>Here is our main EBAS place-value chart:</p>
+
+    <table class="place-chart">
+      <tr>
+        <th>Millions</th>
+        <th>Hundred<br>Thousands</th>
+        <th>Ten<br>Thousands</th>
+        <th>Thousands</th>
+        <th>Hundreds</th>
+        <th>Tens</th>
+        <th>Ones</th>
+      </tr>
+      <tr>
+        <td>1,000,000</td>
+        <td>100,000</td>
+        <td>10,000</td>
+        <td>1,000</td>
+        <td>100</td>
+        <td>10</td>
+        <td>1</td>
+      </tr>
+    </table>
+
+    <p>You don't need to memorise everything immediately.</p>
+
+    <div class="two-column">
+
+      <div class="mini-card">
+        <h4>First</h4>
+        <p>Ones → Tens → Hundreds</p>
+      </div>
+
+      <div class="mini-card">
+        <h4>Then</h4>
+        <p>Thousands → Ten Thousands → Hundred Thousands</p>
+      </div>
+
+      <div class="mini-card">
+        <h4>Finally</h4>
+        <p>Millions</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 10 -->
+  <section>
+    <h2>✏️ 10. WORKED EXAMPLE 1</h2>
+
+    <div class="example">
+
+      <div class="example-title">
+        Question:
+      </div>
+
+      <p>What is the place value of <strong>6</strong> in:</p>
+
+      <div class="number-display">6,245</div>
+
+      <h3>Step 1: Locate 6.</h3>
+
+      <p>6,245</p>
+
+      <h3>Step 2: Identify its place.</h3>
+
+      <p>It is in the:</p>
+
+      <div class="gold-box">
+        Thousands place
+      </div>
+
+      <h3>Step 3: Find its value.</h3>
+
+      <p>6 thousands = <strong>6,000</strong></p>
+
+      <div class="definition">
+        Answer: The place value of 6 is 6,000.
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 11 -->
+  <section>
+    <h2>✏️ 11. WORKED EXAMPLE 2</h2>
+
+    <div class="example">
+
+      <p><strong>What is the place value of 7 in 3,742?</strong></p>
+
+      <div class="number-display">3,742</div>
+
+      <table class="place-chart">
+        <tr>
+          <th>Thousands</th>
+          <th>Hundreds</th>
+          <th>Tens</th>
+          <th>Ones</th>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>7</td>
+          <td>4</td>
+          <td>2</td>
+        </tr>
+      </table>
+
+      <p>The 7 is in the:</p>
+
+      <div class="gold-box">
+        Hundreds place
+      </div>
+
+      <p>Therefore:</p>
+
+      <div class="number-display">7 hundreds = 700</div>
+
+      <div class="definition">
+        Answer: 700
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 12 -->
+  <section>
+    <h2>✏️ 12. WORKED EXAMPLE 3</h2>
+
+    <div class="example">
+
+      <p><strong>What is the place value of 8 in 58,321?</strong></p>
+
+      <div class="number-display">58,321</div>
+
+      <table class="place-chart">
+        <tr>
+          <th>Ten Thousands</th>
+          <th>Thousands</th>
+          <th>Hundreds</th>
+          <th>Tens</th>
+          <th>Ones</th>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>8</td>
+          <td>3</td>
+          <td>2</td>
+          <td>1</td>
+        </tr>
+      </table>
+
+      <p>The 8 is in the:</p>
+
+      <div class="gold-box">
+        Thousands place
+      </div>
+
+      <p>Therefore:</p>
+
+      <div class="number-display">8 × 1,000 = 8,000</div>
+
+      <div class="definition">
+        Answer: 8,000
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 13 -->
+  <section>
+    <h2>🧠 13. FACE VALUE VS PLACE VALUE</h2>
+
+    <p>This is extremely important.</p>
+
+    <p>There are two different ideas:</p>
+
+    <div class="two-column">
+
+      <div class="mini-card">
+        <h4>FACE VALUE</h4>
+        <p>
+          The face value of a digit is simply the digit itself.
+        </p>
+      </div>
+
+      <div class="mini-card">
+        <h4>PLACE VALUE</h4>
+        <p>
+          The place value depends on where the digit is located.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="example">
+
+      <h3>Example</h3>
+
+      <p>Consider:</p>
+
+      <div class="number-display">4,682</div>
+
+      <p>Look at the digit <strong>6</strong>.</p>
+
+      <div class="gold-box">
+        Face value = 6
+        <br><br>
+        Place value = 600
+      </div>
+
+      <p>Why?</p>
+
+      <p>Because 6 is in the hundreds place.</p>
+
+    </div>
+
+    <div class="definition">
+      Face value = the digit itself.
+      <br><br>
+      Place value = the digit's value according to its position.
+    </div>
+  </section>
+
+
+  <!-- 14 -->
+  <section>
+    <h2>✏️ 14. MORE EXAMPLES</h2>
+
+    <div class="example">
+
+      <div class="number-display">725</div>
+
+      <p><strong>For the digit 7:</strong></p>
+
+      <div class="gold-box">
+        Face value = 7
+        <br>
+        Place value = 700
+      </div>
+
+      <p><strong>For the digit 2:</strong></p>
+
+      <div class="gold-box">
+        Face value = 2
+        <br>
+        Place value = 20
+      </div>
+
+      <p><strong>For the digit 5:</strong></p>
+
+      <div class="gold-box">
+        Face value = 5
+        <br>
+        Place value = 5
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 15 -->
+  <section>
+    <h2>💡 15. THE ZERO PROBLEM</h2>
+
+    <p>Zero can occupy a place even though its value is zero.</p>
+
+    <div class="example">
+
+      <div class="number-display">5,042</div>
+
+      <table class="place-chart">
+        <tr>
+          <th>Thousands</th>
+          <th>Hundreds</th>
+          <th>Tens</th>
+          <th>Ones</th>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>0</td>
+          <td>4</td>
+          <td>2</td>
+        </tr>
+      </table>
+
+      <p>Here:</p>
+
+      <div class="gold-box">
+        5 = 5,000
+        <br>
+        0 = 0 hundreds
+        <br>
+        4 = 40
+        <br>
+        2 = 2
+      </div>
+
+      <div class="number-display">
+        5,042 = 5,000 + 40 + 2
+      </div>
+
+    </div>
+
+    <div class="definition">
+      The zero is important because it holds the hundreds place.
+      <br><br>
+      Without it, 5,042 would become 542, which is a different number.
+    </div>
+  </section>
+
+
+  <!-- 16 -->
+  <section>
+    <h2>🔢 16. MOVING DIGITS TO THE LEFT</h2>
+
+    <p>Let's look carefully:</p>
+
+    <div class="number-display">
+      5<br>
+      50<br>
+      500<br>
+      5,000<br>
+      50,000
+    </div>
+
+    <p>The digit remains <strong>5</strong>, but its value changes.</p>
+
+    <table class="place-chart">
+      <tr>
+        <th>Number</th>
+        <th>Position of 5</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Ones</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td>Tens</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>500</td>
+        <td>Hundreds</td>
+        <td>500</td>
+      </tr>
+      <tr>
+        <td>5,000</td>
+        <td>Thousands</td>
+        <td>5,000</td>
+      </tr>
+      <tr>
+        <td>50,000</td>
+        <td>Ten Thousands</td>
+        <td>50,000</td>
+      </tr>
+    </table>
+
+    <div class="gold-box">
+      ⭐ <strong>EBAS GOLDEN RULE</strong>
+      <br><br>
+      As a digit moves one place to the left, its value becomes
+      <strong>10 times greater.</strong>
+    </div>
+  </section>
+
+
+  <!-- 17 -->
+  <section>
+    <h2>📝 17. GUIDED PRACTICE</h2>
+
+    <p>Try these with your teacher or by yourself.</p>
+
+    <h3>A. State the place of each digit in the following numbers.</h3>
+
+    <ol>
+      <li>452</li>
+      <li>378</li>
+      <li>6,245</li>
+      <li>8,321</li>
+      <li>54,216</li>
+    </ol>
+
+    <div class="gold-box">
+      <strong>Tip:</strong> Start from the right-hand side.
+      <br>
+      Ones → Tens → Hundreds → Thousands → ...
+    </div>
+
+    <h3>B. State the place value.</h3>
+
+    <ol>
+      <li>5 in 527</li>
+      <li>4 in 4,321</li>
+      <li>8 in 683</li>
+      <li>7 in 7,405</li>
+      <li>2 in 25,600</li>
+    </ol>
+  </section>
+
+
+  <!-- 18 -->
+  <section>
+    <h2>🧪 18. QUICK QUIZ</h2>
+
+    <div class="question">
+      <strong>1. What is the place value of 5 in 542?</strong>
+
+      <div class="options">
+        A. 5<br>
+        B. 50<br>
+        C. 500<br>
+        D. 5,000
+      </div>
+    </div>
+
+    <div class="question">
+      <strong>2. What is the place value of 7 in 7,326?</strong>
+
+      <div class="options">
+        A. 7<br>
+        B. 70<br>
+        C. 700<br>
+        D. 7,000
+      </div>
+    </div>
+
+    <div class="question">
+      <strong>3. What is the face value of 9 in 9,842?</strong>
+
+      <div class="options">
+        A. 9<br>
+        B. 90<br>
+        C. 900<br>
+        D. 9,000
+      </div>
+    </div>
+
+    <div class="question">
+      <strong>4. In 6,421, which digit is in the tens place?</strong>
+
+      <div class="options">
+        A. 6<br>
+        B. 4<br>
+        C. 2<br>
+        D. 1
+      </div>
+    </div>
+
+    <div class="question">
+      <strong>5. What is the place value of 3 in 43,215?</strong>
+
+      <div class="options">
+        A. 3<br>
+        B. 30<br>
+        C. 300<br>
+        D. 3,000
+      </div>
+    </div>
+
+    <details>
+      <summary style="cursor:pointer; color:#075e2b; font-weight:bold;">
+        ✅ Check Quiz Answers
+      </summary>
+
+      <div class="answer-box">
+        <strong>Answers:</strong>
+        <br><br>
+        1. C — 500
+        <br>
+        2. D — 7,000
+        <br>
+        3. A — 9
+        <br>
+        4. C — 2
+        <br>
+        5. D — 3,000
+      </div>
+    </details>
+  </section>
+
+
+  <!-- 19 -->
+  <section>
+    <h2>🏆 19. EBAS CHALLENGE</h2>
+
+    <div class="challenge">
+
+      <p>Look at this number:</p>
+
+      <div class="number-display">777,777</div>
+
+      <p>Every digit is 7.</p>
+
+      <p>But does every 7 have the same value?</p>
+
+      <div class="definition">
+        No.
+      </div>
+
+      <p>Complete the table:</p>
+
+      <table class="place-chart">
+        <tr>
+          <th>Digit</th>
+          <th>Place</th>
+          <th>Place Value</th>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Hundred Thousands</td>
+          <td>?</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Ten Thousands</td>
+          <td>?</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Thousands</td>
+          <td>?</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Hundreds</td>
+          <td>?</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Tens</td>
+          <td>?</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Ones</td>
+          <td>?</td>
+        </tr>
+      </table>
+
+      <p><strong>Think before looking at the solution.</strong></p>
+
+      <details>
+        <summary style="cursor:pointer; color:#075e2b; font-weight:bold;">
+          🏆 Show EBAS Challenge Solution
+        </summary>
+
+        <div class="answer-box">
+
+          <table class="place-chart">
+            <tr>
+              <th>Digit</th>
+              <th>Place</th>
+              <th>Place Value</th>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Hundred Thousands</td>
+              <td>700,000</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Ten Thousands</td>
+              <td>70,000</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Thousands</td>
+              <td>7,000</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Hundreds</td>
+              <td>700</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Tens</td>
+              <td>70</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Ones</td>
+              <td>7</td>
+            </tr>
+          </table>
+
+          <h3>What have we discovered?</h3>
+
+          <p>
+            The digit is always <strong>7</strong>, but its value changes
+            because its position changes.
+          </p>
+
+          <div class="gold-box">
+            That is the heart of <strong>place value.</strong>
+          </div>
+
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+
+  <!-- 20 -->
+  <section>
+    <h2>🔄 20. LESSON SUMMARY</h2>
+
+    <p>Today we learned:</p>
+
+    <div class="two-column">
+
+      <div class="mini-card">
+        <h4>Place Value</h4>
+        <p>
+          The value of a digit according to its position.
+        </p>
+      </div>
+
+      <div class="mini-card">
+        <h4>Face Value</h4>
+        <p>
+          The digit itself.
+        </p>
+      </div>
+
+    </div>
+
+    <h3>Basic Places</h3>
+
+    <div class="gold-box">
+      Ones → Tens → Hundreds → Thousands →
+      Ten Thousands → Hundred Thousands → Millions
+    </div>
+
+    <div class="definition">
+      ⭐ Most Important Rule:
+      <br><br>
+      A digit's position determines its place value.
+    </div>
+  </section>
+
+
+  <!-- 21 -->
+  <section>
+    <h2>📋 21. HOMEWORK</h2>
+
+    <div class="question">
+      <h3>Question 1</h3>
+
+      <p>
+        Write the place value of each digit in:
+      </p>
+
+      <div class="number-display">3,456</div>
+    </div>
+
+    <div class="question">
+      <h3>Question 2</h3>
+
+      <p>Find the place value of:</p>
+
+      <ol type="a">
+        <li>8 in 8,245</li>
+        <li>4 in 4,321</li>
+        <li>6 in 56,789</li>
+        <li>2 in 2,345</li>
+        <li>9 in 90,125</li>
+      </ol>
+    </div>
+
+    <div class="question">
+      <h3>Question 3</h3>
+
+      <p>
+        For each digit in <strong>7,305</strong>, state its:
+      </p>
+
+      <ul>
+        <li>Face value</li>
+        <li>Place</li>
+        <li>Place value</li>
+      </ul>
+    </div>
+
+    <div class="question">
+      <h3>Question 4 — EBAS Mastery</h3>
+
+      <p>Write a number in which:</p>
+
+      <ul>
+        <li>6 is in the thousands place.</li>
+        <li>4 is in the hundreds place.</li>
+        <li>8 is in the tens place.</li>
+        <li>2 is in the ones place.</li>
+      </ul>
+
+      <p>
+        Then write its expanded form.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- Learning Message -->
+  <section class="message">
+
+    <h2>🌟 EBAS LEARNING MESSAGE</h2>
+
+    <div class="quote">
+      “Mathematics becomes easier when you understand the position,
+      meaning, and value of every number.”
+    </div>
+
+    <p>
+      Prepared by <strong>Shaykh Zikr</strong>
+    </p>
+
+    <p>
+      Excellent Brotherhood Academy Syndicate (EBAS)
+    </p>
+
+    <p class="motto">
+      PASS ALL WITH EXCELLENCE
+    </p>
+
+  </section>
+
+</div>
+
+
+<footer>
+
+  <p>
+    <strong>EBAS Learning Academy</strong>
+  </p>
+
+  <p>
+    JSS 1 Mathematics
+  </p>
+
+  <div class="contact">
+
+    <p>
+      📞 EBAS Mathematics:
+      +232 787 82968 / +232 703 27715
+    </p>
+
+    <p>
+      📧 kamaraabubakarrsidikie1@gmail.com
+    </p>
+
+    <p>
+      🌐 EBAS Learning Academy
+    </p>
+
+  </div>
+
+  <p style="margin-top:15px;">
+    © 2026 Excellent Brotherhood Academy Syndicate
+  </p>
+
+</footer>
+
+</body>
+                                                                    </html>
