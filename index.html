@@ -3,410 +3,293 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#123b2a">
-<meta name="description" content="EBAS Learning Academy - Learn, Practice and Excel.">
 <title>EBAS Learning Academy</title>
 
 <style>
 *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-html{
-    scroll-behavior:smooth;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f8f6;
-    color:#173126;
-    line-height:1.6;
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
+  background:#f4f7f6;
+  color:#173c31;
 }
 
-:root{
-    --green:#123b2a;
-    --green2:#1d6345;
-    --light:#eaf4ee;
-    --gold:#d6a928;
-    --white:#ffffff;
-    --dark:#10251c;
-    --gray:#66736d;
+a{
+  text-decoration:none;
 }
 
-/* TOP BAR */
-.topbar{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:var(--green);
-    color:white;
-    padding:12px 5%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    box-shadow:0 2px 10px rgba(0,0,0,.15);
+header{
+  background:#0d402f;
+  color:white;
+  padding:15px 6%;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 2px 10px rgba(0,0,0,.15);
 }
 
-.brand{
-    display:flex;
-    align-items:center;
-    gap:10px;
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .logo{
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    background:white;
-    color:var(--green);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-    font-size:18px;
-}
-
-.brand h1{
-    font-size:18px;
-}
-
-.brand small{
-    display:block;
-    font-size:11px;
-    opacity:.8;
-}
-
-nav{
-    display:flex;
-    gap:18px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    font-size:14px;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:#d6a928;
+  font-size:22px;
+  font-weight:bold;
 }
 
 .menu{
-    display:none;
-    font-size:25px;
-    cursor:pointer;
+  display:flex;
+  gap:18px;
 }
 
-/* HERO */
+.menu a{
+  color:white;
+  font-weight:bold;
+}
+
+.menu a:hover{
+  color:#e4bd54;
+}
+
+.menu-btn{
+  display:none;
+  background:none;
+  border:none;
+  color:white;
+  font-size:28px;
+}
+
 .hero{
-    background:linear-gradient(135deg,#123b2a,#1d6345);
-    color:white;
-    padding:70px 6%;
-    text-align:center;
+  background:#0d402f;
+  color:white;
+  text-align:center;
+  padding:75px 20px;
 }
 
-.hero .badge{
-    display:inline-block;
-    background:rgba(255,255,255,.12);
-    padding:7px 14px;
-    border-radius:30px;
-    margin-bottom:18px;
-    font-size:13px;
-}
-
-.hero h2{
-    font-size:42px;
-    margin-bottom:12px;
+.hero h1{
+  font-size:44px;
+  margin-bottom:15px;
 }
 
 .hero p{
-    max-width:720px;
-    margin:0 auto 25px;
-    font-size:17px;
-    opacity:.94;
-}
-
-.btn{
-    display:inline-block;
-    background:white;
-    color:var(--green);
-    padding:12px 20px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-    margin:5px;
-}
-
-.btn.gold{
-    background:var(--gold);
-    color:#17200f;
-}
-
-/* GENERAL */
-section{
-    padding:55px 6%;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.section-title span{
-    color:var(--green2);
-    font-size:13px;
-    font-weight:bold;
-    letter-spacing:1px;
-}
-
-.section-title h2{
-    font-size:30px;
-    margin:5px 0;
-}
-
-.section-title p{
-    color:var(--gray);
-}
-
-/* CARDS */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.card{
-    background:white;
-    border-radius:14px;
-    padding:24px;
-    box-shadow:0 5px 18px rgba(0,0,0,.07);
-    border:1px solid #e3ebe6;
-    transition:.2s;
-}
-
-.card:hover{
-    transform:translateY(-3px);
-    box-shadow:0 8px 25px rgba(0,0,0,.1);
-}
-
-.icon{
-    font-size:32px;
-    margin-bottom:12px;
-}
-
-.card h3{
-    margin-bottom:7px;
-    color:var(--green);
-}
-
-.card p{
-    color:var(--gray);
-    font-size:14px;
-}
-
-.card a{
-    display:inline-block;
-    margin-top:14px;
-    color:var(--green2);
-    text-decoration:none;
-    font-weight:bold;
-}
-
-/* CLASSES */
-.class-card{
-    position:relative;
-    overflow:hidden;
-}
-
-.number{
-    font-size:12px;
-    color:var(--gold);
-    font-weight:bold;
-}
-
-/* SUBJECTS */
-.subject{
-    border-top:5px solid var(--green2);
-}
-
-/* RESOURCES */
-.resource{
-    text-align:center;
-}
-
-/* NOTICE */
-.notice{
-    background:var(--light);
-    border-left:5px solid var(--green2);
-    padding:22px;
-    border-radius:8px;
-    margin-bottom:20px;
-}
-
-.notice strong{
-    color:var(--green);
-}
-
-/* ABOUT */
-.about{
-    background:white;
-}
-
-.about-box{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
+  font-size:20px;
+  max-width:750px;
+  margin:0 auto 25px;
 }
 
 .motto{
-    margin-top:20px;
-    font-size:22px;
-    font-weight:bold;
-    color:var(--green2);
+  font-size:24px;
+  font-weight:bold;
+  color:#e4bd54;
 }
 
-/* CONTACT */
+.container{
+  width:92%;
+  max-width:1200px;
+  margin:auto;
+}
+
+section{
+  padding:55px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.section-title h2{
+  font-size:32px;
+  margin-bottom:8px;
+}
+
+.section-title p{
+  color:#557067;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:22px;
+}
+
+.card{
+  background:white;
+  border-radius:16px;
+  padding:25px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  border-top:5px solid #146b50;
+}
+
+.card h3{
+  font-size:23px;
+  margin-bottom:10px;
+}
+
+.card p{
+  color:#50635d;
+  margin-bottom:18px;
+}
+
+.btn{
+  display:inline-block;
+  background:#0d402f;
+  color:white;
+  padding:11px 18px;
+  border-radius:9px;
+  font-weight:bold;
+}
+
+.btn:hover{
+  background:#146b50;
+}
+
+.gold{
+  border-top-color:#d5aa3d;
+}
+
+.gold .btn{
+  background:#9b761c;
+}
+
+.resources{
+  background:#e9f2ee;
+}
+
+.resource-card{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 3px 12px rgba(0,0,0,.07);
+}
+
+.roadmap{
+  background:#0d402f;
+  color:white;
+}
+
+.roadmap .section-title p{
+  color:#d5e5df;
+}
+
+.roadmap .card{
+  color:#173c31;
+}
+
+.about-box{
+  background:white;
+  border-radius:16px;
+  padding:30px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
 .contact{
-    background:var(--dark);
-    color:white;
+  background:#e9f2ee;
+  text-align:center;
 }
 
-.contact .section-title p{
-    color:#c8d5ce;
-}
-
-.contact-box{
-    max-width:700px;
-    margin:auto;
-    text-align:center;
-}
-
-.contact a{
-    color:white;
-    text-decoration:none;
-}
-
-/* FOOTER */
 footer{
-    background:#091810;
-    color:#b8c6be;
-    text-align:center;
-    padding:25px 6%;
-    font-size:13px;
+  background:#092d22;
+  color:white;
+  text-align:center;
+  padding:25px 15px;
 }
 
-/* MOBILE */
-@media(max-width:800px){
+footer p{
+  margin:5px 0;
+}
 
-    nav{
-        display:none;
-        position:absolute;
-        top:70px;
-        left:0;
-        width:100%;
-        background:var(--green);
-        flex-direction:column;
-        padding:15px 6%;
-    }
+@media(max-width:768px){
 
-    nav.show{
-        display:flex;
-    }
+  .menu{
+    display:none;
+    position:absolute;
+    top:65px;
+    left:0;
+    width:100%;
+    background:#0d402f;
+    flex-direction:column;
+    padding:20px;
+  }
 
-    .menu{
-        display:block;
-    }
+  .menu.show{
+    display:flex;
+  }
 
-    .hero{
-        padding:55px 5%;
-    }
+  .menu-btn{
+    display:block;
+  }
 
-    .hero h2{
-        font-size:32px;
-    }
+  .hero h1{
+    font-size:34px;
+  }
 
-    .grid{
-        grid-template-columns:1fr;
-    }
+  .hero p{
+    font-size:17px;
+  }
 
-    section{
-        padding:45px 5%;
-    }
+  .motto{
+    font-size:20px;
+  }
 
-    .section-title h2{
-        font-size:25px;
-    }
+  .section-title h2{
+    font-size:28px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<header class="topbar">
+<header>
+  <div class="navbar">
 
-    <div class="brand">
-        <div class="logo">EBAS</div>
-        <div>
-            <h1>EBAS Learning Academy</h1>
-            <small>Excellence Brotherhood Academy Syndicate</small>
-        </div>
+    <div class="logo">
+      📚 EBAS Learning Academy
     </div>
 
-    <div class="menu" onclick="toggleMenu()">☰</div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-    <nav id="nav">
-        <a href="#home">Home</a>
-        <a href="#classes">Classes</a>
-        <a href="#subjects">Subjects</a>
-        <a href="#resources">Resources</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+    <nav class="menu" id="menu">
+      <a href="#home">Home</a>
+      <a href="#classes">Classes</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#resources">Resources</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
 
+  </div>
 </header>
 
 
 <!-- HERO -->
 <section class="hero" id="home">
 
-    <div class="badge">JSS • SSS • BECE • WASSCE</div>
+  <div class="container">
 
-    <h2>Learn. Practice. Excel.</h2>
+    <h1>Learn. Practice. Excel.</h1>
 
     <p>
-        Welcome to EBAS Learning Academy — a digital learning platform
-        designed to help students build strong academic foundations,
-        practise regularly and prepare confidently for examinations.
+      Welcome to EBAS Learning Academy — a digital learning platform
+      designed to help students learn clearly, practise confidently
+      and PASS ALL WITH EXCELLENCE.
     </p>
 
-    <a href="#classes" class="btn">Start Learning →</a>
-    <a href="#subjects" class="btn gold">Explore Subjects</a>
-
-</section>
-
-
-<!-- WELCOME -->
-<section>
-
-    <div class="section-title">
-        <span>WELCOME TO EBAS</span>
-        <h2>PASS ALL WITH EXCELLENCE</h2>
-        <p>
-            Learn at your own pace, practise what you learn and prepare
-            yourself for academic success.
-        </p>
+    <div class="motto">
+      PASS ALL WITH EXCELLENCE
     </div>
 
-    <div class="notice">
-        <strong>📢 EBAS Learning Centre:</strong>
-        New lessons, notes, exercises, quizzes and examination materials
-        will be added progressively. Check this website regularly for
-        new academic content.
-    </div>
+  </div>
 
 </section>
 
@@ -414,299 +297,453 @@ footer{
 <!-- CLASSES -->
 <section id="classes">
 
+  <div class="container">
+
     <div class="section-title">
-        <span>LEARNING CENTRE</span>
-        <h2>Choose Your Class</h2>
-        <p>Select your academic level to begin learning.</p>
+      <h2>🎓 Classes</h2>
+      <p>Choose your class and begin your learning journey.</p>
     </div>
 
-    <div class="grid">
+    <div class="cards">
 
-        <div class="card class-card">
-            <div class="number">01</div>
-            <div class="icon">🎓</div>
-            <h3>JSS 1</h3>
-            <p>
-                Foundation lessons, basic concepts, exercises and
-                introductory examination preparation.
-            </p>
-            <a href="#subjects">Start JSS 1 →</a>
-        </div>
+      <!-- JSS 1 -->
+      <div class="card">
 
-        <div class="card class-card">
-            <div class="number">02</div>
-            <div class="icon">📘</div>
-            <h3>JSS 2</h3>
-            <p>
-                Developing knowledge, strengthening skills and improving
-                understanding through regular practice.
-            </p>
-            <a href="#subjects">Start JSS 2 →</a>
-        </div>
+        <h3>📘 JSS 1</h3>
 
-        <div class="card class-card">
-            <div class="number">03</div>
-            <div class="icon">🏆</div>
-            <h3>JSS 3</h3>
-            <p>
-                BECE preparation, revision, practice questions and
-                mastery of important topics.
-            </p>
-            <a href="#resources">Prepare for BECE →</a>
-        </div>
+        <p>
+          Build strong foundations in Mathematics and
+          Integrated Science.
+        </p>
 
-        <div class="card class-card">
-            <div class="number">04</div>
-            <div class="icon">🔬</div>
-            <h3>SSS 1</h3>
-            <p>
-                Build a strong foundation for senior secondary science,
-                mathematics and other subjects.
-            </p>
-            <a href="#subjects">Explore SSS →</a>
-        </div>
+        <a class="btn" href="jss1-mathematics.html">
+          Start JSS 1 Mathematics →
+        </a>
 
-        <div class="card class-card">
-            <div class="number">05</div>
-            <div class="icon">📚</div>
-            <h3>SSS 2</h3>
-            <p>
-                Develop deeper understanding and prepare gradually for
-                WASSCE-level questions.
-            </p>
-            <a href="#resources">View Resources →</a>
-        </div>
+      </div>
 
-        <div class="card class-card">
-            <div class="number">06</div>
-            <div class="icon">🎯</div>
-            <h3>SSS 3</h3>
-            <p>
-                Intensive revision, examination practice and WASSCE
-                preparation.
-            </p>
-            <a href="#resources">WASSCE Preparation →</a>
-        </div>
+
+      <!-- JSS 2 -->
+      <div class="card">
+
+        <h3>📗 JSS 2</h3>
+
+        <p>
+          Develop deeper understanding and strengthen
+          your problem-solving skills.
+        </p>
+
+        <a class="btn" href="#subjects">
+          Explore JSS 2 →
+        </a>
+
+      </div>
+
+
+      <!-- JSS 3 -->
+      <div class="card">
+
+        <h3>📕 JSS 3</h3>
+
+        <p>
+          Prepare for BECE with focused lessons,
+          practice and revision.
+        </p>
+
+        <a class="btn" href="#resources">
+          Prepare for BECE →
+        </a>
+
+      </div>
+
+
+      <!-- SSS 1 -->
+      <div class="card gold">
+
+        <h3>📙 SSS 1</h3>
+
+        <p>
+          Begin your senior secondary academic journey
+          with strong foundations.
+        </p>
+
+        <a class="btn" href="#subjects">
+          Explore SSS 1 →
+        </a>
+
+      </div>
+
+
+      <!-- SSS 2 -->
+      <div class="card gold">
+
+        <h3>📙 SSS 2</h3>
+
+        <p>
+          Strengthen your knowledge and prepare for
+          advanced topics.
+        </p>
+
+        <a class="btn" href="#subjects">
+          Explore SSS 2 →
+        </a>
+
+      </div>
+
+
+      <!-- SSS 3 -->
+      <div class="card gold">
+
+        <h3>📙 SSS 3</h3>
+
+        <p>
+          Focus on WASSCE preparation, revision and
+          examination practice.
+        </p>
+
+        <a class="btn" href="#resources">
+          WASSCE Preparation →
+        </a>
+
+      </div>
 
     </div>
+
+  </div>
+
 </section>
 
 
 <!-- SUBJECTS -->
 <section id="subjects">
 
+  <div class="container">
+
     <div class="section-title">
-        <span>ACADEMIC SUBJECTS</span>
-        <h2>Explore Your Subjects</h2>
+
+      <h2>📚 Subjects</h2>
+
+      <p>
+        Explore subjects available through EBAS Learning Academy.
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+      <!-- MATHEMATICS -->
+      <div class="card">
+
+        <h3>➗ Mathematics</h3>
+
         <p>
-            More subjects and lessons will be added as EBAS grows.
+          Learn Mathematics through simple explanations,
+          worked examples, practice and revision.
         </p>
+
+        <a class="btn" href="jss1-mathematics.html">
+          JSS 1 Mathematics →
+        </a>
+
+      </div>
+
+
+      <!-- INTEGRATED SCIENCE -->
+      <div class="card">
+
+        <h3>🔬 Integrated Science</h3>
+
+        <p>
+          Understand Physics, Chemistry, Biology,
+          Agriculture and related science concepts.
+        </p>
+
+        <a class="btn" href="#resources">
+          Explore Science →
+        </a>
+
+      </div>
+
+
+      <!-- PHYSICS -->
+      <div class="card gold">
+
+        <h3>⚛️ Physics</h3>
+
+        <p>
+          Build strong understanding of physical
+          principles and calculations.
+        </p>
+
+        <a class="btn" href="#resources">
+          Explore Physics →
+        </a>
+
+      </div>
+
+
+      <!-- ENGINEERING SCIENCE -->
+      <div class="card gold">
+
+        <h3>⚙️ Engineering Science</h3>
+
+        <p>
+          Learn scientific and engineering concepts
+          through practical explanations.
+        </p>
+
+        <a class="btn" href="#resources">
+          Explore Engineering Science →
+        </a>
+
+      </div>
+
+
+      <!-- FURTHER MATHEMATICS -->
+      <div class="card gold">
+
+        <h3>📐 Further Mathematics</h3>
+
+        <p>
+          Develop advanced mathematical thinking,
+          calculations and problem-solving skills.
+        </p>
+
+        <a class="btn" href="#resources">
+          Explore Further Mathematics →
+        </a>
+
+      </div>
+
+
+      <!-- MORE -->
+      <div class="card">
+
+        <h3>➕ More Subjects</h3>
+
+        <p>
+          More subjects and learning materials will
+          be added as EBAS grows.
+        </p>
+
+        <a class="btn" href="#contact">
+          Stay Connected →
+        </a>
+
+      </div>
+
     </div>
 
-    <div class="grid">
+  </div>
 
-        <div class="card subject">
-            <div class="icon">➗</div>
-            <h3>Mathematics</h3>
-            <p>
-                Numbers, algebra, geometry, statistics, measurement,
-                problem solving and examination preparation.
-            </p>
-            <a href="#resources">Explore Mathematics →</a>
-        </div>
-
-        <div class="card subject">
-            <div class="icon">🧪</div>
-            <h3>Integrated Science</h3>
-            <p>
-                Living things, matter, energy, environment, health,
-                scientific investigation and practical learning.
-            </p>
-            <a href="#resources">Explore Science →</a>
-        </div>
-
-        <div class="card subject">
-            <div class="icon">⚡</div>
-            <h3>Physics</h3>
-            <p>
-                Mechanics, electricity, magnetism, waves, heat,
-                measurements and WASSCE preparation.
-            </p>
-            <a href="#resources">Physics Centre →</a>
-        </div>
-
-        <div class="card subject">
-            <div class="icon">⚙️</div>
-            <h3>Engineering Science</h3>
-            <p>
-                Engineering principles, applications, calculations
-                and practical understanding.
-            </p>
-            <a href="#resources">Engineering Science →</a>
-        </div>
-
-        <div class="card subject">
-            <div class="icon">📐</div>
-            <h3>Further Mathematics</h3>
-            <p>
-                Advanced mathematical concepts, calculations,
-                problem solving and examination practice.
-            </p>
-            <a href="#resources">Further Mathematics →</a>
-        </div>
-
-        <div class="card subject">
-            <div class="icon">🌍</div>
-            <h3>More Subjects</h3>
-            <p>
-                Additional JSS and SSS subjects will be introduced
-                progressively on the platform.
-            </p>
-            <a href="#contact">Suggest a Subject →</a>
-        </div>
-
-    </div>
 </section>
 
 
 <!-- RESOURCES -->
-<section id="resources">
+<section class="resources" id="resources">
+
+  <div class="container">
 
     <div class="section-title">
-        <span>STUDY RESOURCES</span>
-        <h2>Everything in One Place</h2>
-        <p>Use these sections as the academy continues to grow.</p>
-    </div>
 
-    <div class="grid">
+      <h2>📖 Learning Resources</h2>
 
-        <div class="card resource">
-            <div class="icon">📖</div>
-            <h3>Digital Notes</h3>
-            <p>
-                Student-friendly lessons that can be studied directly
-                from a phone or computer.
-            </p>
-        </div>
-
-        <div class="card resource">
-            <div class="icon">📝</div>
-            <h3>Past Questions</h3>
-            <p>
-                BECE and WASSCE revision questions will be organised
-                according to subjects and topics.
-            </p>
-        </div>
-
-        <div class="card resource">
-            <div class="icon">🧠</div>
-            <h3>Practice</h3>
-            <p>
-                Exercises designed to help students practise after
-                studying each topic.
-            </p>
-        </div>
-
-        <div class="card resource">
-            <div class="icon">✅</div>
-            <h3>Quizzes</h3>
-            <p>
-                Interactive quizzes will help students test their
-                understanding.
-            </p>
-        </div>
-
-        <div class="card resource">
-            <div class="icon">🏆</div>
-            <h3>Results</h3>
-            <p>
-                A future area for recording and monitoring academic
-                performance.
-            </p>
-        </div>
-
-        <div class="card resource">
-            <div class="icon">🎯</div>
-            <h3>Exam Preparation</h3>
-            <p>
-                Special revision materials for BECE, WASSCE and
-                other academic examinations.
-            </p>
-        </div>
+      <p>
+        Learn, practise and prepare for examinations.
+      </p>
 
     </div>
+
+
+    <div class="cards">
+
+      <div class="resource-card">
+
+        <h3>📝 Digital Notes</h3>
+
+        <p>
+          Clear and student-friendly notes designed
+          for easy understanding.
+        </p>
+
+      </div>
+
+
+      <div class="resource-card">
+
+        <h3>📚 Past Questions</h3>
+
+        <p>
+          Practise examination-style questions and
+          understand how questions are asked.
+        </p>
+
+      </div>
+
+
+      <div class="resource-card">
+
+        <h3>🧠 Practice & Quizzes</h3>
+
+        <p>
+          Test your understanding after each lesson.
+        </p>
+
+      </div>
+
+
+      <div class="resource-card">
+
+        <h3>🏆 Results & Progress</h3>
+
+        <p>
+          Track your improvement as you learn.
+        </p>
+
+      </div>
+
+
+      <div class="resource-card">
+
+        <h3>🎯 Exam Preparation</h3>
+
+        <p>
+          Prepare systematically for BECE and WASSCE.
+        </p>
+
+      </div>
+
+
+      <div class="resource-card">
+
+        <h3>📢 Announcements</h3>
+
+        <p>
+          Important EBAS learning updates will appear here.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
 
 <!-- ROADMAP -->
-<section>
+<section class="roadmap">
+
+  <div class="container">
 
     <div class="section-title">
-        <span>EBAS ACADEMIC ROADMAP</span>
-        <h2>What We Are Building</h2>
-        <p>The platform will continue growing step by step.</p>
-    </div>
 
-    <div class="grid">
+      <h2>🛤️ EBAS Learning Roadmap</h2>
 
-        <div class="card">
-            <div class="icon">1️⃣</div>
-            <h3>Learn</h3>
-            <p>
-                Study clear explanations, definitions, examples,
-                diagrams and worked solutions.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="icon">2️⃣</div>
-            <h3>Practice</h3>
-            <p>
-                Answer exercises after each lesson and identify
-                areas that need improvement.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="icon">3️⃣</div>
-            <h3>Excel</h3>
-            <p>
-                Take quizzes, revise past questions and prepare
-                confidently for examinations.
-            </p>
-        </div>
+      <p>
+        Follow the EBAS learning method.
+      </p>
 
     </div>
+
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>1️⃣ Learn</h3>
+        <p>
+          Read and study the lesson carefully.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <h3>2️⃣ Understand</h3>
+        <p>
+          Study the explanations and worked examples.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <h3>3️⃣ Practise</h3>
+        <p>
+          Attempt the exercises yourself.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <h3>4️⃣ Check</h3>
+        <p>
+          Check your answers and identify your mistakes.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <h3>5️⃣ Revise</h3>
+        <p>
+          Return to difficult areas and practise again.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <h3>6️⃣ Excel</h3>
+        <p>
+          PASS ALL WITH EXCELLENCE.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
 
 <!-- ABOUT -->
-<section class="about" id="about">
+<section id="about">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>ℹ️ About EBAS</h2>
+
+    </div>
+
 
     <div class="about-box">
 
-        <div class="section-title">
-            <span>ABOUT EBAS</span>
-            <h2>Education With Purpose</h2>
-        </div>
+      <p>
+        <strong>Excellent Brotherhood Academy Syndicate (EBAS)</strong>
+        is an educational initiative committed to helping students
+        understand their lessons, practise effectively and prepare
+        confidently for examinations.
+      </p>
 
-        <p>
-            EBAS Learning Academy is a digital educational platform
-            created to support students with accessible learning
-            materials, academic guidance, practice and examination
-            preparation.
-        </p>
+      <br>
 
-        <p style="margin-top:15px;">
-            The academy aims to make learning easier, more organised
-            and accessible to students through digital education.
-        </p>
+      <p>
+        EBAS Learning Academy focuses on clear explanations,
+        practical examples, exercises, revision and examination
+        preparation.
+      </p>
 
-        <div class="motto">
-            “PASS ALL WITH EXCELLENCE”
-        </div>
+      <br>
+
+      <p>
+        Our goal is simple:
+        <strong>Learn. Practice. Excel.</strong>
+      </p>
 
     </div>
+
+  </div>
 
 </section>
 
@@ -714,36 +751,49 @@ footer{
 <!-- CONTACT -->
 <section class="contact" id="contact">
 
+  <div class="container">
+
     <div class="section-title">
-        <span>CONTACT EBAS</span>
-        <h2>Let's Learn Together</h2>
-        <p>
-            For academic enquiries, materials, registration or
-            information about EBAS Learning Academy, contact us.
-        </p>
-    </div>
 
-    <div class="contact-box">
+      <h2>📞 Contact EBAS</h2>
 
-        <p>📞 <strong>+232 78 782 968</strong></p>
-
-        <p style="margin-top:8px;">
-            📞 <strong>+232 70 327 715</strong>
-        </p>
-
-        <p style="margin-top:8px;">
-            📧 <strong>kamaraabubakarrsidikie1@gmail.com</strong>
-        </p>
-
-        <a
-            class="btn gold"
-            style="margin-top:20px;"
-            href="https://wa.me/23278782968"
-            target="_blank">
-            WhatsApp EBAS
-        </a>
+      <p>
+        Connect with EBAS Learning Academy.
+      </p>
 
     </div>
+
+
+    <div class="about-box">
+
+      <p>
+        📱 <strong>+232 78 782 968</strong>
+      </p>
+
+      <p>
+        📱 <strong>+232 70 327 715</strong>
+      </p>
+
+      <p>
+        📧
+        <strong>
+          kamaraabubakarrsidikie1@gmail.com
+        </strong>
+      </p>
+
+      <br>
+
+      <a
+        class="btn"
+        href="https://wa.me/23278782968"
+        target="_blank"
+      >
+        💬 Contact EBAS on WhatsApp
+      </a>
+
+    </div>
+
+  </div>
 
 </section>
 
@@ -751,19 +801,21 @@ footer{
 <!-- FOOTER -->
 <footer>
 
-    <p><strong>EBAS LEARNING ACADEMY</strong></p>
+  <p>
+    <strong>EBAS LEARNING ACADEMY</strong>
+  </p>
 
-    <p>
-        Excellence Brotherhood Academy Syndicate
-    </p>
+  <p>
+    Excellence Brotherhood Academy Syndicate
+  </p>
 
-    <p style="margin-top:8px;">
-        PASS ALL WITH EXCELLENCE
-    </p>
+  <p>
+    PASS ALL WITH EXCELLENCE
+  </p>
 
-    <p style="margin-top:12px;">
-        © 2026 EBAS Learning Academy. All rights reserved.
-    </p>
+  <p>
+    © 2026 EBAS Learning Academy
+  </p>
 
 </footer>
 
@@ -772,21 +824,12 @@ footer{
 
 function toggleMenu(){
 
-    const nav = document.getElementById("nav");
-
-    nav.classList.toggle("show");
+  document
+    .getElementById("menu")
+    .classList
+    .toggle("show");
 
 }
-
-document.querySelectorAll("nav a").forEach(function(link){
-
-    link.addEventListener("click",function(){
-
-        document.getElementById("nav").classList.remove("show");
-
-    });
-
-});
 
 </script>
 
