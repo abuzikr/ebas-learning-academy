@@ -1,411 +1,569 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#123b2a">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>JSS 1 Mathematics | EBAS Learning Academy</title>
+  <title>JSS 1 Mathematics | EBAS Learning Academy</title>
 
-<style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f8f6;
-    color:#173126;
-    line-height:1.7;
-}
-
-header{
-    background:#123b2a;
-    color:white;
-    padding:20px 6%;
-    text-align:center;
-}
-
-header h1{
-    font-size:28px;
-}
-
-header p{
-    margin-top:5px;
-    opacity:.9;
-}
-
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:35px 5%;
-}
-
-.back{
-    display:inline-block;
-    background:#123b2a;
-    color:white;
-    text-decoration:none;
-    padding:10px 16px;
-    border-radius:7px;
-    margin-bottom:25px;
-}
-
-.intro{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 4px 15px rgba(0,0,0,.07);
-    margin-bottom:30px;
-}
-
-.intro h2{
-    color:#123b2a;
-    margin-bottom:10px;
-}
-
-.term{
-    background:white;
-    margin-bottom:25px;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 4px 15px rgba(0,0,0,.07);
-}
-
-.term h2{
-    color:#123b2a;
-    border-bottom:2px solid #d6a928;
-    padding-bottom:8px;
-    margin-bottom:20px;
-}
-
-.topic{
-    border:1px solid #dfe9e3;
-    border-radius:9px;
-    padding:18px;
-    margin:12px 0;
-}
-
-.topic h3{
-    color:#1d6345;
-    margin-bottom:5px;
-}
-
-.topic p{
-    color:#66736d;
-    font-size:14px;
-}
-
-.study-btn{
-    display:inline-block;
-    margin-top:10px;
-    background:#1d6345;
-    color:white;
-    text-decoration:none;
-    padding:8px 14px;
-    border-radius:6px;
-    font-size:13px;
-}
-
-.tip{
-    background:#eaf4ee;
-    border-left:5px solid #1d6345;
-    padding:18px;
-    margin-top:25px;
-    border-radius:7px;
-}
-
-footer{
-    background:#091810;
-    color:#c8d5ce;
-    text-align:center;
-    padding:25px;
-    margin-top:30px;
-    font-size:13px;
-}
-
-@media(max-width:600px){
-    header h1{
-        font-size:23px;
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .container{
-        padding:25px 5%;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f8f5;
+      color: #222;
+      line-height: 1.6;
     }
-}
-</style>
+
+    header {
+      background: linear-gradient(135deg, #075e35, #0b7a46);
+      color: white;
+      text-align: center;
+      padding: 28px 15px;
+      border-bottom: 5px solid #d4af37;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 15px;
+    }
+
+    .container {
+      width: 94%;
+      max-width: 950px;
+      margin: auto;
+      padding: 20px 0 40px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      background: #075e35;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .back-btn:hover {
+      background: #0b7a46;
+    }
+
+    .hero {
+      background: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 15px;
+      border-left: 6px solid #d4af37;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+    }
+
+    .hero h2 {
+      color: #075e35;
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: #555;
+    }
+
+    .term {
+      margin: 25px 0;
+    }
+
+    .term-title {
+      background: #075e35;
+      color: white;
+      padding: 15px 18px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      border-left: 5px solid #d4af37;
+    }
+
+    .term-title h2 {
+      font-size: 21px;
+    }
+
+    .topic-card {
+      background: white;
+      padding: 20px;
+      margin: 13px 0;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+      border-left: 5px solid #0b7a46;
+    }
+
+    .topic-card h3 {
+      color: #075e35;
+      margin-bottom: 7px;
+    }
+
+    .topic-card p {
+      color: #555;
+      margin-bottom: 13px;
+    }
+
+    .topic-btn {
+      display: inline-block;
+      background: #075e35;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 7px;
+      font-weight: bold;
+    }
+
+    .topic-btn:hover {
+      background: #0b7a46;
+    }
+
+    .coming {
+      background: #777;
+    }
+
+    .coming:hover {
+      background: #666;
+    }
+
+    .study-tip {
+      background: #fff8df;
+      border-left: 6px solid #d4af37;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 25px 0;
+    }
+
+    .study-tip h2 {
+      color: #075e35;
+      margin-bottom: 8px;
+    }
+
+    .message {
+      background: linear-gradient(135deg, #075e35, #0b7a46);
+      color: white;
+      text-align: center;
+      padding: 25px;
+      border-radius: 14px;
+      margin-top: 30px;
+    }
+
+    .message h2 {
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+
+    .contact {
+      text-align: center;
+      margin: 25px 0;
+      color: #555;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #063f25;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    footer strong {
+      color: #d4af37;
+    }
+
+    @media (max-width: 600px) {
+
+      header h1 {
+        font-size: 23px;
+      }
+
+      .hero h2 {
+        font-size: 23px;
+      }
+
+      .topic-card {
+        padding: 17px;
+      }
+
+      .term-title h2 {
+        font-size: 19px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-    <h1>📘 JSS 1 Mathematics</h1>
-    <p>EBAS Learning Academy</p>
-    <p><strong>PASS ALL WITH EXCELLENCE</strong></p>
+  <h1>📘 EBAS LEARNING ACADEMY</h1>
+  <p>JSS 1 MATHEMATICS • PASS ALL WITH EXCELLENCE</p>
 </header>
 
 <div class="container">
 
-    <a href="index.html" class="back">← Back to EBAS Home</a>
+  <a class="back-btn" href="index.html">
+    ← Back to EBAS Home
+  </a>
 
-    <div class="intro">
+  <div class="hero">
 
-        <h2>Welcome to JSS 1 Mathematics</h2>
+    <h2>📐 JSS 1 MATHEMATICS</h2>
 
-        <p>
-            Welcome to the EBAS JSS 1 Mathematics Learning Centre.
-            This section is designed to help students understand
-            Mathematics step by step through simple explanations,
-            examples, practice questions and revision.
-        </p>
+    <p>
+      Welcome to the EBAS JSS 1 Mathematics Learning Center.
+    </p>
 
-        <div class="tip">
-            <strong>💡 Study Tip:</strong>
-            Do not only read Mathematics. Study the example, try the
-            calculation yourself and then answer the practice questions.
-        </div>
+    <p>
+      Build your mathematical foundation step by step,
+      practise consistently, and aim for excellence.
+    </p>
+
+  </div>
+
+
+  <!-- STUDY TIP -->
+
+  <div class="study-tip">
+
+    <h2>💡 EBAS STUDY TIP</h2>
+
+    <p>
+      Mathematics becomes easier when you understand the foundation.
+      Do not rush through a topic. Read the explanation, study the examples,
+      attempt the exercises, and test yourself before moving forward.
+    </p>
+
+  </div>
+
+
+  <!-- FIRST TERM -->
+
+  <div class="term">
+
+    <div class="term-title">
+      <h2>📗 FIRST TERM</h2>
+    </div>
+
+
+    <!-- NUMBER AND NUMERATION -->
+
+    <div class="topic-card">
+
+      <h3>🔢 Unit 1: Number and Numeration</h3>
+
+      <p>
+        Learn the foundation of numbers, counting numbers,
+        natural numbers, whole numbers, numerals and zero.
+      </p>
+
+      <a class="topic-btn"
+         href="jss1-number-and-numeration.html">
+        📖 Start Lesson: Understanding Numbers →
+      </a>
 
     </div>
 
 
-    <!-- FIRST TERM -->
+    <!-- WHOLE NUMBERS -->
 
-    <div class="term">
+    <div class="topic-card">
 
-        <h2>📗 First Term</h2>
+      <h3>🔢 Unit 2: Whole Numbers</h3>
 
-        <div class="topic">
+      <p>
+        Learn how to read, write, compare and work with whole numbers.
+      </p>
 
-            <h3>Topic 1: Number and Numeration</h3>
-
-            <p>
-                Introduction to numbers, counting, place value,
-                face value and writing numbers correctly.
-            </p>
-
-            <a href="#" class="study-btn">
-                Lesson Coming Soon
-            </a>
-
-        </div>
-
-        <div class="topic">
-
-            <h3>Topic 2: Whole Numbers</h3>
-
-            <p>
-                Understanding whole numbers and performing basic
-                operations such as addition, subtraction,
-                multiplication and division.
-            </p>
-
-            <a href="#" class="study-btn">
-                Lesson Coming Soon
-            </a>
-
-        </div>
-
-        <div class="topic">
-
-            <h3>Topic 3: Factors and Multiples</h3>
-
-            <p>
-                Learn how to identify factors, multiples,
-                common factors and common multiples.
-            </p>
-
-            <a href="#" class="study-btn">
-                Lesson Coming Soon
-            </a>
-
-        </div>
-
-        <div class="topic">
-
-            <h3>Topic 4: Fractions</h3>
-
-            <p>
-                Introduction to proper fractions, improper fractions,
-                mixed numbers and basic operations involving fractions.
-            </p>
-
-            <a href="#" class="study-btn">
-                Lesson Coming Soon
-            </a>
-
-        </div>
+      <a class="topic-btn coming" href="#">
+        Lesson Coming Soon
+      </a>
 
     </div>
 
 
-    <!-- SECOND TERM -->
+    <!-- FACTORS -->
 
-    <div class="term">
+    <div class="topic-card">
 
-        <h2>📙 Second Term</h2>
+      <h3>✖️ Unit 3: Factors and Multiples</h3>
 
-        <div class="topic">
+      <p>
+        Understand factors, multiples, prime numbers
+        and basic divisibility ideas.
+      </p>
 
-            <h3>Topic 1: Decimals</h3>
-
-            <p>
-                Understanding decimal numbers, place values,
-                comparing decimals and performing calculations.
-            </p>
-
-            <a href="#" class="study-btn">
-                Lesson Coming Soon
-            </a>
-
-        </div>
-
-        <div class="topic">
-
-            <h3>Topic 2: Percentages</h3>
-
-            <p>
-                Introduction to percentages and their relationship
-                with fractions and decimals.
-            </p>
-
-            <a href="#" class="study-btn">
-                Lesson Coming Soon
-            </a>
-
-        </div>
-
-        <div class="topic">
-
-            <h3>Topic 3: Basic Algebra</h3>
-
-            <p>
-                Introduction to variables, algebraic expressions,
-                simple equations and substitution.
-            </p>
-
-            <a href="#" class="study-btn">
-                Lesson Coming Soon
-            </a>
-
-        </div>
-
-        <div class="topic">
-
-            <h3>Topic 4: Simple Geometry</h3>
-
-            <p>
-                Introduction to points, lines, angles and
-                basic geometrical shapes.
-            </p>
-
-            <a href="#" class="study-btn">
-                Lesson Coming Soon
-            </a>
-
-        </div>
+      <a class="topic-btn coming" href="#">
+        Lesson Coming Soon
+      </a>
 
     </div>
 
 
-    <!-- THIRD TERM -->
+    <!-- FRACTIONS -->
 
-    <div class="term">
+    <div class="topic-card">
 
-        <h2>📕 Third Term</h2>
+      <h3>🍕 Unit 4: Fractions</h3>
 
-        <div class="topic">
+      <p>
+        Learn fractions from the beginning, including
+        proper fractions, improper fractions and mixed numbers.
+      </p>
 
-            <h3>Topic 1: Measurement</h3>
+      <a class="topic-btn coming" href="#">
+        Lesson Coming Soon
+      </a>
 
-            <p>
-                Measuring length, mass, time and other quantities
-                using appropriate units.
-            </p>
+    </div>
 
-            <a href="#" class="study-btn">
-                Lesson Coming Soon
-            </a>
+  </div>
 
-        </div>
 
-        <div class="topic">
+  <!-- SECOND TERM -->
 
-            <h3>Topic 2: Perimeter and Area</h3>
+  <div class="term">
 
-            <p>
-                Learn how to calculate the perimeter and area
-                of common plane shapes.
-            </p>
+    <div class="term-title">
+      <h2>📙 SECOND TERM</h2>
+    </div>
 
-            <a href="#" class="study-btn">
-                Lesson Coming Soon
-            </a>
 
-        </div>
+    <!-- DECIMALS -->
 
-        <div class="topic">
+    <div class="topic-card">
 
-            <h3>Topic 3: Statistics</h3>
+      <h3>🔢 Unit 5: Decimals</h3>
 
-            <p>
-                Introduction to collecting, organising and
-                representing simple data.
-            </p>
+      <p>
+        Understand decimal numbers and how they relate to fractions
+        and everyday calculations.
+      </p>
 
-            <a href="#" class="study-btn">
-                Lesson Coming Soon
-            </a>
-
-        </div>
-
-        <div class="topic">
-
-            <h3>Topic 4: Revision and Examination Practice</h3>
-
-            <p>
-                Review important topics and practise questions
-                in preparation for examinations.
-            </p>
-
-            <a href="#" class="study-btn">
-                Practice Coming Soon
-            </a>
-
-        </div>
+      <a class="topic-btn coming" href="#">
+        Lesson Coming Soon
+      </a>
 
     </div>
 
 
-    <div class="tip">
+    <!-- PERCENTAGES -->
 
-        <strong>🎯 EBAS Learning Method:</strong>
+    <div class="topic-card">
 
-        <p>
-            Learn → Understand → Practise → Check Your Answer →
-            Revise → Excel.
-        </p>
+      <h3>💯 Unit 6: Percentages</h3>
+
+      <p>
+        Learn the meaning of percentage and how to calculate
+        simple percentages.
+      </p>
+
+      <a class="topic-btn coming" href="#">
+        Lesson Coming Soon
+      </a>
 
     </div>
+
+
+    <!-- ALGEBRA -->
+
+    <div class="topic-card">
+
+      <h3>🔤 Unit 7: Basic Algebra</h3>
+
+      <p>
+        Begin algebra from scratch by learning variables,
+        constants, expressions and simple equations.
+      </p>
+
+      <a class="topic-btn coming" href="#">
+        Lesson Coming Soon
+      </a>
+
+    </div>
+
+
+    <!-- GEOMETRY -->
+
+    <div class="topic-card">
+
+      <h3>📐 Unit 8: Simple Geometry</h3>
+
+      <p>
+        Explore basic geometric shapes, lines, angles
+        and simple geometric ideas.
+      </p>
+
+      <a class="topic-btn coming" href="#">
+        Lesson Coming Soon
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- THIRD TERM -->
+
+  <div class="term">
+
+    <div class="term-title">
+      <h2>📕 THIRD TERM</h2>
+    </div>
+
+
+    <!-- MEASUREMENT -->
+
+    <div class="topic-card">
+
+      <h3>📏 Unit 9: Measurement</h3>
+
+      <p>
+        Learn about length, mass, capacity, time
+        and common units of measurement.
+      </p>
+
+      <a class="topic-btn coming" href="#">
+        Lesson Coming Soon
+      </a>
+
+    </div>
+
+
+    <!-- AREA -->
+
+    <div class="topic-card">
+
+      <h3>📐 Unit 10: Perimeter and Area</h3>
+
+      <p>
+        Learn how to calculate perimeter and area
+        of basic shapes.
+      </p>
+
+      <a class="topic-btn coming" href="#">
+        Lesson Coming Soon
+      </a>
+
+    </div>
+
+
+    <!-- STATISTICS -->
+
+    <div class="topic-card">
+
+      <h3>📊 Unit 11: Statistics</h3>
+
+      <p>
+        Introduction to collecting, organising and interpreting
+        simple data.
+      </p>
+
+      <a class="topic-btn coming" href="#">
+        Lesson Coming Soon
+      </a>
+
+    </div>
+
+
+    <!-- REVISION -->
+
+    <div class="topic-card">
+
+      <h3>📝 Unit 12: Revision and Examination Practice</h3>
+
+      <p>
+        Review important JSS 1 Mathematics concepts
+        and practise examination-style questions.
+      </p>
+
+      <a class="topic-btn coming" href="#">
+        Lesson Coming Soon
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- LEARNING MESSAGE -->
+
+  <div class="message">
+
+    <h2>🌟 EBAS LEARNING MESSAGE</h2>
+
+    <p>
+      “Do not be afraid of Mathematics.
+      Every difficult topic begins with a simple idea.
+      Understand the foundation, practise consistently,
+      and excellence will follow.”
+    </p>
+
+    <br>
+
+    <p>
+      <strong>Prepared by Shaykh Zikr</strong>
+    </p>
+
+    <p>
+      Excellent Brotherhood Academy Syndicate (EBAS)
+    </p>
+
+    <p>
+      <strong>PASS ALL WITH EXCELLENCE</strong>
+    </p>
+
+  </div>
+
+
+  <!-- CONTACT -->
+
+  <div class="contact">
+
+    <p><strong>📞 EBAS Mathematics Contacts</strong></p>
+
+    <p>
+      +232 78 782 968 &nbsp; | &nbsp; +232 70 327 715
+    </p>
+
+    <p>
+      📧 kamaraabubakarrsidikie1@gmail.com
+    </p>
+
+    <p>
+      🌐 EBAS Learning Academy
+    </p>
+
+  </div>
 
 </div>
 
 
 <footer>
 
-    <p><strong>EBAS LEARNING ACADEMY</strong></p>
+  <p>
+    © 2026 <strong>Excellent Brotherhood Academy Syndicate (EBAS)</strong>
+  </p>
 
-    <p>Excellence Brotherhood Academy Syndicate</p>
+  <p>
+    PASS ALL WITH EXCELLENCE
+  </p>
 
-    <p>PASS ALL WITH EXCELLENCE</p>
-
-    <p style="margin-top:10px;">
-        © 2026 EBAS Learning Academy
-    </p>
+  <p>
+    Prepared by Shaykh Zikr
+  </p>
 
 </footer>
 
 </body>
-      </html>
+</html>
